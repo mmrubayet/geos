@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load leaflet_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRISPOT | {% block title %} {% endblock title %}</title>
+
+{% block css %}
+    {% leaflet_css %}
+
+    {% block css_extra %}
+    {% endblock css_extra %}
+{% endblock css %}
+</head>
+<body>
+    <h1>PRISPOT</h1>
+    <div>
+    {% block content %}
+
+    {% endblock content %}
+    </div>
+
+{% block js %}
+    {% leaflet_js %}
+    {% block js_extra %}
+    {% endblock js_extra %}
+{% endblock js %}
+</body>
+</html>
